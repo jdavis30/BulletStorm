@@ -1,0 +1,8 @@
+/*
+ * BulletStorm
+ * Author: Jasper Davis
+ * File: Character.h
+ * Date: 5/18/2016
+ * Description:   
+ * 		Broad class for all characters in-game, such as players, NPCs, and enemies.
+ */

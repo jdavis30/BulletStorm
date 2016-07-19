@@ -1,0 +1,9 @@
+#include "AI.h"
+
+AI::AI(){
+  id = 0;
+}
+
+int AI::getType(){
+  return type;
+}
