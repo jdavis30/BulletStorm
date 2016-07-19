@@ -9,24 +9,19 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 #include "Entity.h"
-#include "AI.h"
 #include <exception>
 
-class IncompatibleTypeException: public std::exception {
-  virtual const char* errorInfo() const throw() {
-    return "AI and Character are incompatible types";
-  }
-} itexception;
+template<typename T>
 
 class Character: public Entity {
  public: 
-  Character(int xi = 0, int yi = 0, int typei = 0, AI aitype);
+  Character(T aitype, int xi = 0, int yi = 0, int typei = 0);
   int getType();
   void setType(int typei = 0);
   void update(double dt);
 		
  private:
-  AI ai;
+  T ai;
   int type;
 };
 

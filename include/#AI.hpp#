@@ -10,16 +10,26 @@
 #define AI_H
 
 class AI {
- public:
+public:
   AI();
-  virtual void  update(dt, Character c) = 0;
+  virtual void update(double dt, Character<AI>* const c);
   int getType();
   
- private:
+private:
   int type;
 
-  
+};
 
+AI<T>::AI(){
+  type = 0;
+}
+
+int AI<T>::getType(){
+  return type;
+}
+
+void AI<T>::update(double dt, Character<AI>* const c) {
+  c.setx(c.getx());
 }
 
 #endif /*AI_H*/
